@@ -8,28 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-/**
- * 4. Создать консольное приложение, которое просит пользователя ввести из консоли 5 чисел
- * Все числа должны быть записаны в массив целых чисел.
- * После этого, массив должен быть отсортирован по возрастанию и выведен консоль.
- * Сначала начальная версия, далее - отсортированная.
- * <p>
- * Пример:
- * <p>
- * Enter number 1:
- * 5
- * Enter number 2:
- * 4
- * Enter number 3:
- * 3
- * Enter number 4:
- * 2
- * Enter number 5:
- * 1
- * <p>
- * Initial array: 5, 4, 3, 2, 1
- * Sorted array: 1, 2, 3, 4, 5.
- */
+
 public class Arrays {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -38,6 +17,7 @@ public class Arrays {
         for (int i = 1; i <= 5; i++) {
             System.out.print("Enter Number " + i + " of 5: ");
             list.add(scanner.nextInt());
+
         }
         System.out.println("Initial array: " + list.toString());
         Collections.sort(list);
