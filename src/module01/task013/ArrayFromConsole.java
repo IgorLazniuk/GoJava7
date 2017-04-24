@@ -14,7 +14,7 @@ import java.util.Scanner;
  * - поиск чила по значению
  * - сортировка
  */
-public class ArrayFromConsol {
+public class ArrayFromConsole {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
