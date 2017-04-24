@@ -36,6 +36,7 @@ public class Arrays {
         scanner.close();
         System.out.println("Initial array: " + list.toString());
         Collections.sort(list);
+
         System.out.println("Sorted array: " + list.toString());
 
 
