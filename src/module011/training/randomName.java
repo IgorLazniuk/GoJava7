@@ -1,4 +1,4 @@
-package module01.training;
+package module011.training;
 
 /**
  * Created by IGOR.LAZNIUK on 19.04.2017.
