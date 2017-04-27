@@ -12,24 +12,37 @@ public class ArrayHolder {
     Scanner scanner = new Scanner(System.in);
     ArrayList<String> arrayList = new ArrayList<>();
 
+    void creator() {
+        arrayList.clear();
+        System.out.print("Enter array size: ");
+        String input = scanner.nextLine();
+        if (input.matches("[0-9]*")) {
+            for (int i = 0; i < Integer.valueOf(input); i++) {
+                System.out.print("Enter element " + i + " of " + input + ": ");
+                arrayList.add(i, scanner.nextLine());
+            }
+            System.out.println("Entered array:");
+            System.out.println(arrayList);
 
-    ArrayList creator(int arraySize) {
-arrayList.clear();
-        for (int i = 0; i < arraySize; i++) {
-            System.out.print("Enter element " + i + " of " + arraySize + ": ");
-            arrayList.add(i, scanner.nextLine());
+
         }
-        return arrayList;
     }
 
-    int search() {
-        System.out.println("Метод search выполнен");
-        return 0;
+    void search() {
+        System.out.print("Enter element your are looking for: ");
+        String input = scanner.nextLine();
+        if (arrayList.contains(input)) {
+            System.out.println("The number your are looking for is in your array with the index - " + arrayList.indexOf(input));
+        } else System.out.println("The number your are looking for is absent your array.");
+
+
     }
 
-    ArrayList sort(ArrayList arrayList) {
+    void sort() {
         Collections.sort(arrayList);
-        return arrayList;
+        System.out.println("Sorted array:");
+        System.out.println(arrayList);
+
     }
 
 
