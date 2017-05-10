@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class ArrayHolder {
     Scanner scanner = new Scanner(System.in);
-    ArrayList<String> arrayList = new ArrayList<>();
+   private ArrayList<String> arrayList = new ArrayList<>();
 
     void creator() {
         arrayList.clear();
@@ -22,6 +22,7 @@ public class ArrayHolder {
             }
             System.out.println("Entered array:");
             System.out.println(arrayList);
+
 
 
         }
