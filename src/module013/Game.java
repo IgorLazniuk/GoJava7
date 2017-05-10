@@ -83,7 +83,7 @@ public class Game {
 
     public static char CheckGame() {
         char winner = ' ';
-        // Проверка по горизонтали
+        // Horizontal Check
         for (int i = 0; i < 3; i++) {
             if (Field.field[i][0] == Field.field[i][1] && Field.field[i][1] == Field.field[i][2]
                     && Field.field[i][0] != '+') {
@@ -92,7 +92,7 @@ public class Game {
             }
         }
 
-        // Проверка по вертикали если победитель пока не найден
+        // Vertical Check
         if (winner == ' ') {
             for (int i = 0; i < 3; i++) {
                 if (Field.field[0][i] == Field.field[1][i] && Field.field[1][i] == Field.field[2][i]
@@ -103,7 +103,7 @@ public class Game {
             }
         }
 
-        // Проверка главной диагонали если победитель пока не найден
+        // Right Diagonal Check
         if (winner == ' ') {
             if (Field.field[0][0] == Field.field[1][1] && Field.field[1][1] == Field.field[2][2]
                     && Field.field[0][0] != '+') {
@@ -111,7 +111,7 @@ public class Game {
             }
         }
 
-        // Проверка побочной диагонали если победитель пока не найден
+        // Left Diagonal Check
         if (winner == ' ') {
             if (Field.field[0][2] == Field.field[1][1] && Field.field[1][1] == Field.field[2][0]
                     && Field.field[0][2] != '+') {
