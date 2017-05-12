@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Game {
 
-    public static void start() {
+    public void start() {
         System.out.println("Game Started!!!");
         printField();
         while (CheckGame() == ' ' && canMove()) {
@@ -28,7 +28,7 @@ public class Game {
 
     }
 
-    public static void humanMove() {
+    public void humanMove() {
         Scanner scanner = new Scanner(System.in);
 
         int x, y;
@@ -47,7 +47,7 @@ public class Game {
         Field.field[x][y] = 'X';
     }
 
-    public static void compMove() {
+    public void compMove() {
         int x = (int) (Math.random() * 3), y = (int) (Math.random() * 3);
         while (Field.field[x][y] == '0' || Field.field[x][y] == 'X') {
             x = (int) (Math.random() * 3);
@@ -72,7 +72,7 @@ public class Game {
         return p;
     }
 
-  public static void printField() {
+  public void printField() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 System.out.print(Field.field[i][j]);
@@ -81,7 +81,7 @@ public class Game {
         }
     }
 
-    public static char CheckGame() {
+    public char CheckGame() {
         char winner = ' ';
         // Horizontal Check
         for (int i = 0; i < 3; i++) {
